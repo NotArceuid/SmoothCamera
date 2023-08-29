@@ -2,7 +2,7 @@ using Godot;
 namespace SmoothCamera;
 public partial class CameraController : Node3D
 {
-	[Export] public Vector2 CameraSensitivity = new Vector2(.1f, .1f);
+    [Export] public Vector2 CameraSensitivity = new Vector2(.1f, .1f);
     [Export] public float CameraHeight = 2;
     [Export] public float CameraDistance = 1;
     [Export] public Vector2 ClampAngle = new Vector2(-20, 70);
@@ -12,9 +12,9 @@ public partial class CameraController : Node3D
     [Export] public Vector2 ZoomLimits = new Vector2(-10, 10);
     [Export] public float ZoomLerpSpeed = 1f;
     [Export] public float CameraRotationAcel = 3f;
-	[Export] public float CameraFollowAcel = 3;
+    [Export] public float CameraFollowAcel = 3;
 
-	public float FacingRotation { get; set; }
+    public float FacingRotation { get; set; }
 
     private float ZoomAmount = 0;
 
