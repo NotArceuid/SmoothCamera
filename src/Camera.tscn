@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3 uid="uid://d0cm7ke5ttgtt"]
+
+[ext_resource type="Script" path="res://src/CameraController.cs" id="1_f1o0r"]
+
+[node name="Camera" type="Node3D"]
+top_level = true
+script = ExtResource("1_f1o0r")
+CameraDistance = 5.0
+Offset = Vector3(0, 2.5, 2.5)
+ZoomStep = 0.3
+CameraRotationAcel = 13.0
+CameraFollowAcel = 6.0
+
+[node name="YPivot" type="Node3D" parent="."]
+
+[node name="ZPivot" type="Node3D" parent="YPivot"]
+
+[node name="Target" type="Node3D" parent="YPivot/ZPivot"]
+
+[node name="SpringArm3D" type="SpringArm3D" parent="."]
+top_level = true
+
+[node name="Camera3D" type="Camera3D" parent="SpringArm3D"]
